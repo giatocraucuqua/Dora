@@ -41,11 +41,13 @@ git checkout 0.4.1
 make install
 ```
 
-# config and init app
+**config and init app**
+```
 dorad config node tcp://localhost:${DORA_PORT}657
 dorad config keyring-backend os
 dorad config chain-id vota-testnet
 dorad init "test" --chain-id vota-testnet
+```
 
 # download genesis and addrbook
 wget -O $HOME/.dora/config/genesis.json https://server-4.itrocket.net/testnet/dora/genesis.json
