@@ -49,9 +49,11 @@ dorad config chain-id vota-testnet
 dorad init "test" --chain-id vota-testnet
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.dora/config/genesis.json https://server-4.itrocket.net/testnet/dora/genesis.json
 wget -O $HOME/.dora/config/addrbook.json  https://server-4.itrocket.net/testnet/dora/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="dcf2d8132162293de52ca474eee308a03689ef75@dora-testnet-seed.itrocket.net:39656"
