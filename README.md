@@ -55,12 +55,13 @@ wget -O $HOME/.dora/config/genesis.json https://server-4.itrocket.net/testnet/do
 wget -O $HOME/.dora/config/addrbook.json  https://server-4.itrocket.net/testnet/dora/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="dcf2d8132162293de52ca474eee308a03689ef75@dora-testnet-seed.itrocket.net:39656"
 PEERS="2ae884cc092d593207cccfb16e81313ef0b478f4@dora-testnet-peer.itrocket.net:43656,ef37c0e26ed44bd6f628638be7009ceb229801e2@65.108.206.118:26656,1c070c5b38c716370af9b0d344209821cceeceb3@18.142.245.25:26656,4f9205cb2c34541f7daebe2a43f303c0d758b383@5.75.133.134:43656,1a162fdf46cabfc9b63b1525c327e101f9418329@65.109.30.13:26757,6bedeb292ec261dc9664233c1e9f43d88657ce2c@167.235.178.134:25356,3c3aa7ede95c8e1391331f3970b62b4ca4003a12@15.235.212.150:56096,635bc8a8ff9d6bc15cea091a27bcd01578ddffa2@65.109.62.39:43656,e486efcbdddf9b496bcf76ed8bc216977929ae6a@188.40.66.173:25356,bfde287f9659ac66d04b5aad68c37658b821e2e5@34.48.66.38:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.dora/config/config.toml
-
+```
 # set custom ports in app.toml
 sed -i.bak -e "s%:1317%:${DORA_PORT}317%g;
 s%:8080%:${DORA_PORT}080%g;
