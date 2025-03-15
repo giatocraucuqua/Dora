@@ -190,7 +190,8 @@ while true; do
 done
 ```
 
-Create validator
+**Create validator**
+```
 Moniker
 Identity
 Details
@@ -219,6 +220,7 @@ dorad tx staking create-validator \
 --chain-id vota-testnet \
 --fees 20000000000000000peaka \
 -y
+```
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
