@@ -1,6 +1,9 @@
-Manual Installation
+**Manual Installation**
+
 Official Documentation
+```
 Recommended Hardware: 8 Cores, 32GB RAM, 500GB of storage (NVME)
+```
 
 **install dependencies, if needed**
 ```
